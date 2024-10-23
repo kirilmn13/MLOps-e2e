@@ -39,7 +39,7 @@ creamos gitignore y añadimos .venv
 ########## CONFIG DVC ######
 --> pip install dvc
 --> pip install dvc-s3
---> creamos folder data mkdir data
+--> creamos folder data mkdir data estructura y metemos datos
 --> dvc init
 --> dentro de data creamos gitignore con las carpetas que tiene que gestionar DVC
 --> dvc remote add origin s3://dvc
@@ -61,9 +61,28 @@ dvc pull -r origin
 --> añadimos .pre-commit-config.yaml
 --> copiar config flake8 .flake8
 
+######### CONFIG HYDRA ########
+creamos carpeta config para gestionar hydra
+creamos main.yaml para configuracion principal
+
+creamos configs para modelos de hiperparámetros
+creamos configs para preprocesamiento elegir target y features
+todos estos configs estan enlazados al main
+desde el main se elige la del model y la del preprocces
+
+
+
+########## MFFLOW ######
+--> pip install mlflow
+-- cambiar tracking uri desde dagshb a config/main.yaml
+
 
 ########## BENTOML ######
 --> pip install bentoml
+
+
+
+
 
 --------------------------------- NOTAS PARA PONENTES -----------------------------------------
 
