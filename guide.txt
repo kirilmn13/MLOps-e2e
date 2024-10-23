@@ -50,6 +50,10 @@ creamos gitignore y añadimos .venv
 # PUSH
 
 
+########## PRE-COMMIT ######
+--> pip install pre-commit
+--> pre-commit install
+
 --------------------------------- NOTAS PARA PONENTES -----------------------------------------
 
 --- ML SIN OPS ES BASURA
