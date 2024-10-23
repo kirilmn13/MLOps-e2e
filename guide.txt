@@ -1,0 +1,69 @@
+#### Requisitos equipo
+=== Python3.10
+=== Docker
+=== Git
+
+########### ENV ############
+--> python -m venv .venv
+--> ./.venv/Scripts/activate
+! Comprobar entorno activado
+
+########## REPOS ###########
+--> Creamos Github REPO
+
+En VSCODE
+creamos gitignore y añadimos .venv
+---> echo "# MLOps-e2e" >> README.md
+     git init
+     git add .
+     git commit -m "first commit"
+     git branch -M main
+     git remote add origin https://github.com/kirilmn13/MLOps-e2e.git
+     git push -u origin main
+
+--> remove folder from git git rm -r folder
+--> reset commits git reset
+
+--> Nos vamos Dagshub y creamos repo a partir de Github, hay que dar permisos
+    --> ya estaría todo sicronizado entre repos
+
+
+
+######### REQS #############
+--> python.exe -m pip install --upgrade pip  || python -m pip install --upgrade pip==19.2.3
+--> Copiamos requirements.txt
+--> pip install -r requirements.txt -U
+
+# PUSH
+
+########## CONFIG DVC ######
+--> pip install dvc 
+--> pip install dvc-s3
+--> creamos folder data mkdir data
+--> dvc init
+--> dentro de data creamos gitignore con las carpetas que tiene que gestionar DVC
+--> dvc remote add origin s3://dvc
+--> dvc remote modify origin endpointurl https://dagshub.com/kirilmn13/MLOps-e2e.s3
+--> dvc remote modify origin --local access_key_id e90bb58aed2b444b24a588dc01e9240810700ac2
+--> dvc remote modify origin --local secret_access_key e90bb58aed2b444b24a588dc01e9240810700ac2
+
+# PUSH
+
+
+--------------------------------- NOTAS PARA PONENTES -----------------------------------------
+
+--- ML SIN OPS ES BASURA
+--- 90% de los modelos desarrollados se quedan sin desplegar
+--- Qué parte faltaría por automataizar, los training en máquina con MAKEFILE y algún scheduler
+
+
+$ git rm --cached giant_file
+# Stage our giant file for removal, but leave it on disk
+
+git commit --amend -CHEAD
+# Amend the previous commit with your change
+# Simply making a new commit won't work, as you need
+# to remove the file from the unpushed history as well
+
+git push
+# Push our rewritten, smaller commit
