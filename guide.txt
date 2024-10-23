@@ -46,7 +46,7 @@ creamos gitignore y añadimos .venv
 --> dvc remote modify origin endpointurl https://dagshub.com/kirilmn13/MLOps-e2e.s3
 --> dvc remote modify origin --local access_key_id e90bb58aed2b444b24a588dc01e9240810700ac2
 --> dvc remote modify origin --local secret_access_key e90bb58aed2b444b24a588dc01e9240810700ac2
-
+--> dvc push -r origin
 # PUSH
 
 
