@@ -37,7 +37,7 @@ creamos gitignore y añadimos .venv
 # PUSH
 
 ########## CONFIG DVC ######
---> pip install dvc 
+--> pip install dvc
 --> pip install dvc-s3
 --> creamos folder data mkdir data
 --> dvc init
@@ -47,12 +47,23 @@ creamos gitignore y añadimos .venv
 --> dvc remote modify origin --local access_key_id e90bb58aed2b444b24a588dc01e9240810700ac2
 --> dvc remote modify origin --local secret_access_key e90bb58aed2b444b24a588dc01e9240810700ac2
 --> dvc push -r origin
+
+hay que añadir data a gitignore
+
+dvc pull -r origin
+
 # PUSH
 
 
 ########## PRE-COMMIT ######
 --> pip install pre-commit
 --> pre-commit install
+--> añadimos .pre-commit-config.yaml
+--> copiar config flake8 .flake8
+
+
+########## BENTOML ######
+--> pip install bentoml
 
 --------------------------------- NOTAS PARA PONENTES -----------------------------------------
 
