@@ -1,9 +1,30 @@
 repos:
-- repo: https://github.com/psf/black
-  rev: 22.1.0
-  hooks:
-    - id: black
-      additional_dependencies: ['click==8.0.4']
+-   repo: https://github.com/psf/black
+    rev: 21.7b0
+    hooks:
+    -   id: black
+        language_version: python3.12
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-yaml
+    -   id: check-added-large-files
+    -   id: check-merge-conflict
+    -   id: check-ast
+    -   id: double-quote-string-fixer
+    -   id: debug-statements
+    -   id: check-toml
+    -   id: check-json
+    -   id: check-xml
+
+# repos:
+# - repo: https://github.com/psf/black
+#   rev: 22.1.0
+#   hooks:
+#     - id: black
+#       additional_dependencies: ['click==8.0.4']
 # -   repo: https://gitlab.com/pycqa/flake8
 #     rev: 3.8.4
 #     hooks:
@@ -12,4 +33,3 @@ repos:
 #     rev: 5.7.0
 #     hooks:
 #     -   id: isort
-
